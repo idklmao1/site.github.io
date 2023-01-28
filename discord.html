@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Discord Clone</title>
+  </head>
+  <body>
+    <header>
+      <h1>Discord Clone</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Server List</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h2>Welcome to the Discord Clone!</h2>
+        <p>This is a basic example of a Discord clone built using HTML, CSS, and JavaScript.</p>
+        <h2>Messages</h2>
+        <br><br>
+        <div id="messages"></div>
+        <form>
+          <input type="text" id="messageInput" placeholder="Type your message here">
+          <button type="submit">Send</button>
+        </form>
+    
+    </section>
+    </main>
+    <script>
+        const messageInput = document.getElementById('messageInput');
+const messagesDiv = document.getElementById('messages');
+
+const profilePictures = [
+  'https://randomuser.me/api/portraits/men/1.jpg',
+  'https://randomuser.me/api/portraits/women/1.jpg',
+  'https://randomuser.me/api/portraits/men/2.jpg',
+  'https://randomuser.me/api/portraits/women/2.jpg',
+  // ... add more profile pictures as needed
+];
+
+document.querySelector('form').addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const randomProfilePicture = profilePictures[Math.floor(Math.random() * profilePictures.length)];
+  
+  const newMessage = document.createElement('div');
+  newMessage.innerHTML = `
+    <img src="${randomProfilePicture}" alt="Profile Picture">
+    <p>${messageInput.value}</p>
+    <button>Like</button>
+  `;
+  
+  messagesDiv.appendChild(newMessage);
+  messageInput.value = '';
+});
+
+messagesDiv.addEventListener('click', (event) => {
+  if (event.target.tagName === 'BUTTON') {
+    event.target.innerText = 'Liked!';
+  }
+});
+    </script>
+    <style>
+
+#messages img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+}
+
+
+
+body {
+  background-color: #36393F;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  background-color: #7289DA;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  background-color: #2C2F33;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  background-color: #36393F;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+}
+
+main section {
+  width: 100%;
+  max-width: 800px;
+  background-color: #2C2F33;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+main section h2 {
+  margin: 0;
+  color: #7289DA;
+}
+
+main section p {
+  margin: 10px 0;
+}
+
+footer {
+  background-color: #2C2F33;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+#messageInput {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  color: #8c8a99;
+  background-color: #3f3f41;
+  width: 400px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+form button[type="submit"] {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #7289da;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+form button[type="submit"]:hover {
+  background-color: #5b6dcd;
+}
+
+button {
+  padding: 4px 8px;
+  font-size: 14px;
+  background-color: #7289da;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+button:hover {
+  background-color: #5b6dcd;
+}
+    </style>
+    <footer>
+      <p>Copyright ©2021 Discord Clone</p>
+    </footer>
+  </body>
+</html>
