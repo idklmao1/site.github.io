@@ -1,0 +1,121 @@
+
+
+#messages img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+}
+
+
+
+body {
+  background-color: #36393F;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  background-color: #7289DA;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  background-color: #2C2F33;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  background-color: #36393F;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+}
+
+main section {
+  width: 100%;
+  max-width: 800px;
+  background-color: #2C2F33;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+main section h2 {
+  margin: 0;
+  color: #7289DA;
+}
+
+main section p {
+  margin: 10px 0;
+}
+
+footer {
+  background-color: #2C2F33;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+#messageInput {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  color: #8c8a99;
+  background-color: #3f3f41;
+  width: 400px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+form button[type="submit"] {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #7289da;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+form button[type="submit"]:hover {
+  background-color: #5b6dcd;
+}
+
+button {
+  padding: 4px 8px;
+  font-size: 14px;
+  background-color: #7289da;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+button:hover {
+  background-color: #5b6dcd;
+}
